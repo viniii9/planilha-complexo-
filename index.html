@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planilha Complexo Apostas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --vermelho: #e50914;
+      --azul: #001f3f;
+      --branco: #ffffff;
+      --cinza-claro: #f4f4f4;
+      --azul-claro: #0074D9;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--cinza-claro);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, var(--azul), #003366);
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    header h1 {
+      font-family: 'Rubik Moonrocks', cursive;
+      font-size: 3em;
+      color: var(--vermelho);
+      text-shadow: 2px 2px #000;
+    }
+    main {
+      padding: 50px 10%;
+      background-color: var(--branco);
+      border-radius: 12px;
+      margin: -30px auto 40px auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .resumo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .resumo p {
+      font-size: 1.2em;
+    }
+    .melhor-dia {
+      font-weight: bold;
+      color: var(--vermelho);
+      font-size: 1.3em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
+    th {
+      background-color: var(--azul-claro);
+      color: var(--branco);
+      font-size: 1em;
+    }
+    tr:nth-child(even) {
+      background-color: var(--cinza-claro);
+    }
+    tr:hover {
+      background-color: #e8f4ff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--azul);
+      color: var(--branco);
+      font-size: 0.9em;
+    }
+    @media (max-width: 768px) {
+      main {
+        padding: 20px;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PLANILHA COMPLEXO APOSTAS</h1>
+  </header>
+  <main>
+    <div class="resumo">
+      <p>Total de apostas na semana: <strong>11.291</strong></p>
+      <p class="melhor-dia">Melhor dia: Quinta-feira (19/06) com 1.856 apostas</p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Dia da Semana</th>
+          <th>Data</th>
+          <th>Mediadores em Fila</th>
+          <th>Apostas Total</th>
+          <th>Confirmadas</th>
+          <th>Aguardando</th>
+          <th>Apostas Últimas 24h</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Segunda-feira</td><td>16/06</td><td>20</td><td>36</td><td>29</td><td>7</td><td>1313</td></tr>
+        <tr><td>Terça-feira</td><td>17/06</td><td>18</td><td>63</td><td>59</td><td>4</td><td>1368</td></tr>
+        <tr><td>Quarta-feira</td><td>18/06</td><td>14</td><td>45</td><td>42</td><td>3</td><td>1752</td></tr>
+        <tr><td><strong>Quinta-feira</strong></td><td>19/06</td><td>13</td><td>49</td><td>45</td><td>4</td><td><strong>1856</strong></td></tr>
+        <tr><td>Sexta-feira</td><td>20/06</td><td>13</td><td>62</td><td>55</td><td>7</td><td>1534</td></tr>
+        <tr><td>Sábado</td><td>21/06</td><td>12</td><td>55</td><td>48</td><td>7</td><td>1716</td></tr>
+        <tr><td>Domingo</td><td>22/06</td><td>14</td><td>64</td><td>57</td><td>7</td><td>1752</td></tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    &copy; 2025 Complexo Apostas. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
