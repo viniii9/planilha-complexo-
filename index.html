@@ -1,72 +1,75 @@
-<section id="tabela">
-  <table>
-    <thead>
-      <tr>
-        <th>Dia</th>
-        <th>Mediadores em Fila</th>
-        <th>Apostas Totais</th>
-        <th>Confirmadas</th>
-        <th>Aguardando</th>
-        <th>Últimas 24h</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Segunda-feira 16/06</td>
-        <td>20</td>
-        <td>36</td>
-        <td>29</td>
-        <td>7</td>
-        <td>1313</td>
-      </tr>
-      <tr>
-        <td>Terça-feira 17/06</td>
-        <td>18</td>
-        <td>63</td>
-        <td>59</td>
-        <td>4</td>
-        <td>1368</td>
-      </tr>
-      <tr>
-        <td>Quarta-feira 18/06</td>
-        <td>14</td>
-        <td>45</td>
-        <td>42</td>
-        <td>3</td>
-        <td>1752</td>
-      </tr>
-      <tr>
-        <td>Quinta-feira 19/06</td>
-        <td>13</td>
-        <td>49</td>
-        <td>45</td>
-        <td>4</td>
-        <td>1856</td>
-      </tr>
-      <tr>
-        <td>Sexta-feira 20/06</td>
-        <td>13</td>
-        <td>62</td>
-        <td>55</td>
-        <td>7</td>
-        <td>1534</td>
-      </tr>
-      <tr>
-        <td>Sábado 21/06</td>
-        <td>12</td>
-        <td>55</td>
-        <td>48</td>
-        <td>7</td>
-        <td>1716</td>
-      </tr>
-      <tr>
-        <td>Domingo 22/06</td>
-        <td>14</td>
-        <td>64</td>
-        <td>57</td>
-        <td>7</td>
-        <td>1752</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planilha Complexo Apostas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rubik+Moonrocks&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    PLANILHA COMPLEXO APOSTAS
+  </header>
+
+  <nav>
+    <a href="#resumo">Resumo</a>
+    <a href="#tabela">Tabela</a>
+    <a href="#grafico">Gráfico</a>
+  </nav>
+
+  <div class="container">
+    <section id="resumo" class="stats-cards">
+      <div class="card" style="background: linear-gradient(to right, #001f3f, #0074D9);">
+        <h3><span>📊</span> Total da Semana</h3>
+        <p>11.291 apostas</p>
+      </div>
+      <div class="card" style="background: linear-gradient(to right, #0074D9, #e50914);">
+        <h3><span>🏆</span> Melhor Dia</h3>
+        <p>Quinta-feira<br /><small>(1856 apostas)</small></p>
+      </div>
+      <div class="card" style="background: linear-gradient(to right, #e50914, #001f3f);">
+        <h3><span>📅</span> Média Diária</h3>
+        <p>1613 apostas</p>
+      </div>
+    </section>
+
+    <main id="tabela">
+      <h2>Detalhes por Dia</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Dia</th>
+            <th>Mediadores em Fila</th>
+            <th>Apostas Totais</th>
+            <th>Confirmadas</th>
+            <th>Aguardando</th>
+            <th>Últimas 24h</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Segunda 16/06</td><td>20</td><td>36</td><td>29</td><td>7</td><td>1313</td></tr>
+          <tr><td>Terça 17/06</td><td>18</td><td>63</td><td>59</td><td>4</td><td>1368</td></tr>
+          <tr><td>Quarta 18/06</td><td>14</td><td>45</td><td>42</td><td>3</td><td>1752</td></tr>
+          <tr><td>Quinta 19/06</td><td>13</td><td>49</td><td>45</td><td>4</td><td><strong>1856</strong></td></tr>
+          <tr><td>Sexta 20/06</td><td>13</td><td>62</td><td>55</td><td>7</td><td>1534</td></tr>
+          <tr><td>Sábado 21/06</td><td>12</td><td>55</td><td>48</td><td>7</td><td>1716</td></tr>
+          <tr><td>Domingo 22/06</td><td>14</td><td>64</td><td>57</td><td>7</td><td>1752</td></tr>
+        </tbody>
+      </table>
+    </main>
+
+    <section class="chart-container" id="grafico">
+      <h2>Gráfico de Apostas por Dia</h2>
+      <canvas id="graficoApostas"></canvas>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Complexo Apostas • Todos os direitos reservados
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
