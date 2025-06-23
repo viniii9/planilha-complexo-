@@ -7,7 +7,6 @@ body {
   color: #001f3f;
 }
 
-/* Container centralizado e largura máxima */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -183,11 +182,15 @@ footer {
   width: 100%;
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE */
+
+/* Tablets e menores desktops */
 @media (max-width: 900px) {
   .stats-cards {
     flex-direction: column;
     align-items: center;
+    max-width: 350px;
+    margin: 0 auto 50px;
   }
 
   nav {
@@ -196,6 +199,51 @@ footer {
   }
 
   table {
+    font-size: 0.95rem;
+  }
+
+  header {
+    font-size: 2.2rem;
+    padding: 20px 10px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .stats-cards .card {
+    flex: 1 1 100%;
+    max-width: 320px;
+    padding: 25px 15px;
+  }
+
+  nav {
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+
+  main, section {
+    padding: 20px 10px;
+  }
+
+  table {
     font-size: 0.9rem;
+  }
+
+  thead th, tbody td {
+    padding: 10px 12px;
+  }
+
+  header {
+    font-size: 1.9rem;
+    padding: 18px 10px;
+  }
+
+  .chart-container {
+    padding: 20px 15px;
   }
 }
