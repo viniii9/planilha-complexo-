@@ -1,0 +1,141 @@
+/* Reset e variáveis */
+:root {
+  --vermelho: #e50914;
+  --azul: #001f3f;
+  --branco: #ffffff;
+  --cinza-claro: #f4f4f4;
+  --azul-claro: #0074D9;
+  --sombra: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--cinza-claro);
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(90deg, var(--azul), #003366);
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-family: 'Rubik Moonrocks', cursive;
+  font-size: 3em;
+  color: var(--vermelho);
+  text-shadow: 2px 2px #000;
+}
+
+/* Conteúdo principal */
+main {
+  padding: 50px 10%;
+  background-color: var(--branco);
+  border-radius: 12px;
+  margin: -30px auto 40px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Resumo */
+.resumo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.resumo p {
+  font-size: 1.2em;
+}
+
+.melhor-dia {
+  font-weight: bold;
+  color: var(--vermelho);
+  font-size: 1.3em;
+  background-color: #ffecec;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  background-color: var(--azul-claro);
+  color: var(--branco);
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--cinza-claro);
+}
+
+tr:hover {
+  background-color: #e8f4ff;
+  cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--azul);
+  color: var(--branco);
+  font-size: 0.9em;
+  box-shadow: var(--sombra);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(229, 9, 20, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  table, th, td {
+    font-size: 0.9em;
+  }
+}
