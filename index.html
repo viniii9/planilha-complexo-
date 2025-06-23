@@ -19,17 +19,17 @@
   </nav>
 
   <section id="resumo" class="stats-cards">
-    <div class="card">
-      <h3>Total da Semana</h3>
-      <p>11.291 apostas</p>
+    <div class="card" style="background: linear-gradient(to right, #001f3f, #0074D9); color: white;">
+      <h3><span style="font-size: 1.5em;">📊</span> Total da Semana</h3>
+      <p style="font-size: 1.6em;">11.291 apostas</p>
     </div>
-    <div class="card">
-      <h3>Melhor Dia</h3>
-      <p>Quinta-feira (1856)</p>
+    <div class="card" style="background: linear-gradient(to right, #0074D9, #e50914); color: white;">
+      <h3><span style="font-size: 1.5em;">🏆</span> Melhor Dia</h3>
+      <p style="font-size: 1.6em;">Quinta-feira<br><small>(1856 apostas)</small></p>
     </div>
-    <div class="card">
-      <h3>Média Diária</h3>
-      <p>1613 apostas</p>
+    <div class="card" style="background: linear-gradient(to right, #e50914, #001f3f); color: white;">
+      <h3><span style="font-size: 1.5em;">📅</span> Média Diária</h3>
+      <p style="font-size: 1.6em;">1613 apostas</p>
     </div>
   </section>
 
@@ -58,9 +58,9 @@
     </table>
   </main>
 
-  <section class="chart-container" id="grafico">
+  <section class="chart-container" id="grafico" style="max-width: 700px; margin: 0 auto;">
     <h2 style="text-align:center; margin-bottom: 20px; color:#001f3f">Gráfico de Apostas por Dia</h2>
-    <canvas id="graficoApostas"></canvas>
+    <canvas id="graficoApostas" style="height: 300px;"></canvas>
   </section>
 
   <footer>
@@ -75,17 +75,33 @@
       data: {
         labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
         datasets: [{
-          label: 'Apostas nas últimas 24h',
+          label: 'Últimas 24h',
           data: [1313, 1368, 1752, 1856, 1534, 1716, 1752],
-          backgroundColor: '#e50914',
-          borderRadius: 6
+          backgroundColor: [
+            '#001f3f', '#0074D9', '#0074D9', '#e50914', '#001f3f', '#0074D9', '#e50914'
+          ],
+          borderRadius: 10,
+          borderSkipped: false
         }]
       },
       options: {
         responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { backgroundColor: '#001f3f', titleColor: '#fff', bodyColor: '#fff' }
+        },
         scales: {
           y: {
-            beginAtZero: true
+            beginAtZero: true,
+            ticks: {
+              stepSize: 500,
+              color: '#001f3f'
+            }
+          },
+          x: {
+            ticks: {
+              color: '#001f3f'
+            }
           }
         }
       }
