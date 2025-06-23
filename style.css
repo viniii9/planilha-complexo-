@@ -54,22 +54,22 @@ main, section {
   padding: 30px 20px;
 }
 
-/* Cards resumo */
+/* Cards resumo - tamanho reduzido e mais compacto */
 .stats-cards {
   display: flex;
   justify-content: space-around;
-  gap: 25px;
+  gap: 20px;
   flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto 50px;
+  max-width: 900px;
+  margin: 0 auto 40px;
 }
 
 .stats-cards .card {
-  flex: 1 1 280px;
+  flex: 1 1 220px;
   color: white;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  padding: 30px 25px;
+  padding: 18px 15px;
   text-align: center;
   transition: transform 0.3s ease;
   cursor: default;
@@ -88,39 +88,39 @@ main, section {
 }
 
 .stats-cards .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 28px rgba(0,0,0,0.3);
 }
 
 .stats-cards .card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .stats-cards .card p {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
-/* Tabela */
+/* Tabela - compacta e menor */
 #tabela {
   max-width: 1100px;
-  margin: 0 auto 70px;
+  margin: 0 auto 60px;
   overflow-x: auto;
 }
 
 table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 12px;
-  font-size: 1rem;
+  border-spacing: 0 8px;
+  font-size: 0.9rem; /* menor fonte */
   background: white;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 thead tr {
@@ -131,7 +131,7 @@ thead tr {
 }
 
 thead th {
-  padding: 15px 20px;
+  padding: 12px 15px;
   border-radius: 15px 15px 0 0;
 }
 
@@ -145,7 +145,7 @@ tbody tr:hover {
 }
 
 tbody td {
-  padding: 15px 20px;
+  padding: 10px 15px; /* menos padding */
   color: #001f3f;
   border-bottom: 1px solid #ddd;
   vertical-align: middle;
@@ -159,10 +159,10 @@ tbody tr strong {
 
 /* Gráfico */
 .chart-container {
-  max-width: 700px;
-  margin: 0 auto 80px;
+  max-width: 600px; /* menor largura para mais elegância */
+  margin: 0 auto 70px;
   background: white;
-  padding: 30px;
+  padding: 25px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
@@ -189,8 +189,8 @@ footer {
   .stats-cards {
     flex-direction: column;
     align-items: center;
-    max-width: 350px;
-    margin: 0 auto 50px;
+    max-width: 320px;
+    margin: 0 auto 40px;
   }
 
   nav {
@@ -199,7 +199,7 @@ footer {
   }
 
   table {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 
   header {
@@ -212,8 +212,8 @@ footer {
 @media (max-width: 480px) {
   .stats-cards .card {
     flex: 1 1 100%;
-    max-width: 320px;
-    padding: 25px 15px;
+    max-width: 300px;
+    padding: 18px 12px;
   }
 
   nav {
@@ -231,11 +231,11 @@ footer {
   }
 
   table {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
   }
 
   thead th, tbody td {
-    padding: 10px 12px;
+    padding: 8px 10px;
   }
 
   header {
