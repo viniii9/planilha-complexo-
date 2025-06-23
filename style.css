@@ -1,4 +1,4 @@
-/* Reset e estilos base (mantém do anterior) */
+/* Reset básico e fonte */
 body {
   font-family: 'Poppins', sans-serif;
   background: #f4f7fb;
@@ -13,6 +13,7 @@ body {
   padding: 20px;
 }
 
+/* Cabeçalho */
 header {
   background-color: #001f3f;
   padding: 25px 20px;
@@ -26,6 +27,7 @@ header {
   z-index: 1000;
 }
 
+/* Navegação */
 nav {
   background: #0074D9;
   display: flex;
@@ -47,6 +49,7 @@ nav a:hover {
   text-shadow: 0 0 5px #e50914;
 }
 
+/* Seções e espaçamento */
 main, section {
   padding: 30px 20px;
 }
@@ -148,6 +151,7 @@ tbody td {
   vertical-align: middle;
 }
 
+/* Destaque para o melhor dia */
 tbody tr strong {
   color: #e50914;
   font-weight: 700;
@@ -178,24 +182,20 @@ footer {
   width: 100%;
 }
 
-/* RESPONSIVIDADE AVANÇADA */
+/* RESPONSIVIDADE */
 
-/* Tablets e dispositivos médios */
+/* Tablets e menores desktops */
 @media (max-width: 900px) {
   .stats-cards {
     flex-direction: column;
-    max-width: 400px;
+    align-items: center;
+    max-width: 350px;
     margin: 0 auto 50px;
   }
 
   nav {
     flex-direction: column;
-    gap: 20px;
-    padding: 15px 0;
-  }
-
-  nav a {
-    font-size: 1.2rem;
+    gap: 15px;
   }
 
   table {
@@ -208,85 +208,45 @@ footer {
   }
 }
 
-/* Celulares e telas pequenas */
+/* Smartphones */
 @media (max-width: 480px) {
-  .stats-cards {
-    max-width: 350px;
-    margin: 0 auto 40px;
-    padding: 0 10px;
-  }
-
   .stats-cards .card {
-    flex: none;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 20px 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    flex: 1 1 100%;
+    max-width: 320px;
+    padding: 25px 15px;
   }
 
   nav {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 10px;
+    gap: 12px;
+    padding: 10px 0;
   }
 
   nav a {
-    font-size: 1.1rem;
-    padding: 10px 0;
-    text-align: center;
+    font-size: 1rem;
+    padding: 8px 10px;
   }
 
   main, section {
-    padding: 20px 15px;
+    padding: 20px 10px;
   }
 
   table {
     font-size: 0.9rem;
-    border-spacing: 0 8px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
   }
 
-  thead tr {
-    display: none; /* Esconde cabeçalho no mobile para layout card */
-  }
-
-  tbody tr {
-    display: block;
-    margin-bottom: 18px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    padding: 15px 15px 25px 15px;
-  }
-
-  tbody td {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border: none;
-    border-bottom: 1px solid #eee;
-    font-size: 0.9rem;
-  }
-
-  tbody td:last-child {
-    border-bottom: none;
-  }
-
-  tbody td::before {
-    content: attr(data-label);
-    font-weight: 600;
-    color: #0074D9;
+  thead th, tbody td {
+    padding: 10px 12px;
   }
 
   header {
-    font-size: 2rem;
-    padding: 20px 10px;
+    font-size: 1.9rem;
+    padding: 18px 10px;
   }
 
   .chart-container {
     padding: 20px 15px;
   }
 }
+
 
 
