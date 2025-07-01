@@ -1,24 +1,30 @@
+// main.js
+
 const ctx = document.getElementById('graficoApostas').getContext('2d');
-new Chart(ctx, {
+
+const grafico = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+    labels: [
+      'Segunda 23/06',
+      'Terça 24/06',
+      'Quarta 25/06',
+      'Quinta 26/06',
+      'Sexta 27/06',
+      'Sábado 28/06',
+      'Domingo 29/06'
+    ],
     datasets: [{
-      label: 'Últimas 24h',
-      data: [1313, 1368, 1752, 1856, 1534, 1716, 1752],
-      backgroundColor: [
-        '#001f3f', '#0074D9', '#0074D9', '#e50914', '#001f3f', '#0074D9', '#e50914'
-      ],
-      borderRadius: 10,
+      label: 'Apostas últimas 24h',
+      data: [1407, 1403, 1314, 1511, 1637, 2029, 2202],
+      backgroundColor: '#0074D9',
+      borderRadius: 8,
       borderSkipped: false
     }]
   },
   options: {
     responsive: true,
-    plugins: {
-      legend: { display: false },
-      tooltip: { backgroundColor: '#001f3f', titleColor: '#fff', bodyColor: '#fff' }
-    },
+    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true,
@@ -31,6 +37,16 @@ new Chart(ctx, {
         ticks: {
           color: '#001f3f'
         }
+      }
+    },
+    plugins: {
+      legend: {
+        display: false
+      },
+      tooltip: {
+        backgroundColor: '#001f3f',
+        titleColor: '#ffffff',
+        bodyColor: '#ffffff'
       }
     }
   }
