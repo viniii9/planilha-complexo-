@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    PLANILHA COMPLEXO APOSTAS
+    <h1>PLANILHA COMPLEXO APOSTAS</h1>
   </header>
 
   <nav>
@@ -21,23 +21,24 @@
 
   <div class="container">
     <section id="resumo" class="stats-cards">
-      <div class="card" style="background: linear-gradient(to right, #001f3f, #0074D9);">
+      <div class="card">
         <h3><span>📊</span> Total da Semana</h3>
-        <p>11.291 apostas</p>
+        <p>11.503 apostas</p>
       </div>
-      <div class="card" style="background: linear-gradient(to right, #0074D9, #e50914);">
+      <div class="card">
         <h3><span>🏆</span> Melhor Dia</h3>
-        <p>Quinta-feira<br /><small>(1856 apostas)</small></p>
+        <p>Domingo<br /><small>(2202 apostas)</small></p>
       </div>
-      <div class="card" style="background: linear-gradient(to right, #e50914, #001f3f);">
+      <div class="card">
         <h3><span>📅</span> Média Diária</h3>
-        <p>1613 apostas</p>
+        <p>1643 apostas</p>
       </div>
     </section>
 
     <main id="tabela">
       <h2>Detalhes por Dia</h2>
       <table>
+        <caption>Resumo das Apostas da Semana</caption>
         <thead>
           <tr>
             <th>Dia</th>
@@ -49,20 +50,22 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Segunda 16/06</td><td>20</td><td>36</td><td>29</td><td>7</td><td>1313</td></tr>
-          <tr><td>Terça 17/06</td><td>18</td><td>63</td><td>59</td><td>4</td><td>1368</td></tr>
-          <tr><td>Quarta 18/06</td><td>14</td><td>45</td><td>42</td><td>3</td><td>1752</td></tr>
-          <tr><td>Quinta 19/06</td><td>13</td><td>49</td><td>45</td><td>4</td><td><strong>1856</strong></td></tr>
-          <tr><td>Sexta 20/06</td><td>13</td><td>62</td><td>55</td><td>7</td><td>1534</td></tr>
-          <tr><td>Sábado 21/06</td><td>12</td><td>55</td><td>48</td><td>7</td><td>1716</td></tr>
-          <tr><td>Domingo 22/06</td><td>14</td><td>64</td><td>57</td><td>7</td><td>1752</td></tr>
+          <tr><td>Segunda 23/06</td><td>18</td><td>50</td><td>43</td><td>7</td><td>1407</td></tr>
+          <tr><td>Terça 24/06</td><td>15</td><td>51</td><td>46</td><td>5</td><td>1403</td></tr>
+          <tr><td>Quarta 25/06</td><td>18</td><td>57</td><td>53</td><td>4</td><td>1314</td></tr>
+          <tr><td>Quinta 26/06</td><td>18</td><td>56</td><td>50</td><td>6</td><td>1511</td></tr>
+          <tr><td>Sexta 27/06</td><td>17</td><td>51</td><td>47</td><td>4</td><td>1637</td></tr>
+          <tr><td>Sábado 28/06</td><td>16</td><td>60</td><td>53</td><td>7</td><td>2029</td></tr>
+          <tr><td>Domingo 29/06</td><td>11</td><td>83</td><td>77</td><td>6</td><td><strong>2202</strong></td></tr>
         </tbody>
       </table>
     </main>
 
     <section class="chart-container" id="grafico">
       <h2>Gráfico de Apostas por Dia</h2>
-      <canvas id="graficoApostas"></canvas>
+      <div style="max-width: 100%; overflow-x: auto;">
+        <canvas id="graficoApostas" width="600" height="300"></canvas>
+      </div>
     </section>
   </div>
 
@@ -73,4 +76,3 @@
   <script src="main.js"></script>
 </body>
 </html>
-
