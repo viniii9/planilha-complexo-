@@ -247,6 +247,18 @@ footer {
     padding: 20px 15px;
   }
 }
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th:nth-child(4), td:nth-child(4), 
+  th:nth-child(5), td:nth-child(5) {
+    display: none; /* Esconde colunas de confirmadas e aguardando */
+  }
+}
 
 
 
