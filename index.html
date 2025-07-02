@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <h1>PLANILHA COMPLEXO APOSTAS</h1>
+    PLANILHA COMPLEXO APOSTAS
   </header>
 
   <nav>
@@ -21,28 +21,27 @@
 
   <div class="container">
     <section id="resumo" class="stats-cards">
-  <div class="card" style="background: linear-gradient(to right, #001f3f, #0074D9);">
-    <h3><span>📊</span> Total da Semana</h3>
-    <p>11.503 apostas</p>
-  </div>
-  <div class="card" style="background: linear-gradient(to right, #0074D9, #e50914);">
-    <h3><span>🏆</span> Melhor Dia</h3>
-    <p>Domingo<br /><small>(2202 apostas)</small></p>
-  </div>
-  <div class="card" style="background: linear-gradient(to right, #e50914, #001f3f);">
-    <h3><span>📅</span> Média Diária</h3>
-    <p>1643 apostas</p>
-  </div>
-  <div class="card" style="background: linear-gradient(to right, #1e3c72, #2a5298);">
-    <h3><span>👥</span> Média de Mediadores</h3>
-    <p>16 em fila<br /><small>de 25 possíveis</small></p>
-  </div>
-</section>
+      <div class="card" style="background: linear-gradient(to right, #001f3f, #0074D9);">
+        <h3><span>📊</span> Total da Semana</h3>
+        <p>11.503 apostas</p>
+      </div>
+      <div class="card" style="background: linear-gradient(to right, #0074D9, #e50914);">
+        <h3><span>🏆</span> Melhor Dia</h3>
+        <p>Domingo<br /><small>(2202 apostas)</small></p>
+      </div>
+      <div class="card" style="background: linear-gradient(to right, #e50914, #001f3f);">
+        <h3><span>📅</span> Média Diária</h3>
+        <p>1643 apostas</p>
+      </div>
+      <div class="card" style="background: linear-gradient(to right, #001f3f, #39CCCC);">
+        <h3><span>🧮</span> Média de Mediadores</h3>
+        <p>15.3 por dia</p>
+      </div>
+    </section>
 
     <main id="tabela">
       <h2>Detalhes por Dia</h2>
       <table>
-        <caption>Resumo das Apostas da Semana</caption>
         <thead>
           <tr>
             <th>Dia</th>
@@ -51,25 +50,24 @@
             <th>Confirmadas</th>
             <th>Aguardando</th>
             <th>Últimas 24h</th>
+            <th>Média por Mediador</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Segunda 23/06</td><td>18</td><td>50</td><td>43</td><td>7</td><td>1407</td></tr>
-          <tr><td>Terça 24/06</td><td>15</td><td>51</td><td>46</td><td>5</td><td>1403</td></tr>
-          <tr><td>Quarta 25/06</td><td>18</td><td>57</td><td>53</td><td>4</td><td>1314</td></tr>
-          <tr><td>Quinta 26/06</td><td>18</td><td>56</td><td>50</td><td>6</td><td>1511</td></tr>
-          <tr><td>Sexta 27/06</td><td>17</td><td>51</td><td>47</td><td>4</td><td>1637</td></tr>
-          <tr><td>Sábado 28/06</td><td>16</td><td>60</td><td>53</td><td>7</td><td>2029</td></tr>
-          <tr><td>Domingo 29/06</td><td>11</td><td>83</td><td>77</td><td>6</td><td><strong>2202</strong></td></tr>
+          <tr><td>Segunda 23/06</td><td>18</td><td>50</td><td>43</td><td>7</td><td>1407</td><td>2.39</td></tr>
+          <tr><td>Terça 24/06</td><td>15</td><td>51</td><td>46</td><td>5</td><td>1403</td><td>3.07</td></tr>
+          <tr><td>Quarta 25/06</td><td>18</td><td>57</td><td>53</td><td>4</td><td>1314</td><td>2.94</td></tr>
+          <tr><td>Quinta 26/06</td><td>18</td><td>56</td><td>50</td><td>6</td><td>1511</td><td>2.78</td></tr>
+          <tr><td>Sexta 27/06</td><td>17</td><td>51</td><td>47</td><td>4</td><td>1637</td><td>2.76</td></tr>
+          <tr><td>Sábado 28/06</td><td>16</td><td>60</td><td>53</td><td>7</td><td>2029</td><td>3.31</td></tr>
+          <tr><td>Domingo 29/06</td><td>11</td><td>83</td><td>77</td><td>6</td><td>2202</td><td>7.00</td></tr>
         </tbody>
       </table>
     </main>
 
     <section class="chart-container" id="grafico">
       <h2>Gráfico de Apostas por Dia</h2>
-      <div style="max-width: 100%; overflow-x: auto;">
-        <canvas id="graficoApostas" width="600" height="300"></canvas>
-      </div>
+      <canvas id="graficoApostas"></canvas>
     </section>
   </div>
 
